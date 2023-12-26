@@ -1,0 +1,4 @@
+NODE_PORT=8000
+HOST="localhost"
+PASSWORD=
+DATABASE="Node_ejs"

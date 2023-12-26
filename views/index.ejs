@@ -1,0 +1,107 @@
+<%- include('layouts/header.ejs') -%> <% if(message == 'create'){ %>
+<script>
+  toastr.success("Data Insert SuccessFully!");
+</script>
+<% } else if(message == 'logout'){ %>
+<script>
+  toastr.error("Logout Sucessfully!");
+</script>
+<% } else if(message == 'error'){ %>
+<script>
+  toastr.error("Something went wrong, Please Check again!");
+</script>
+<% } else {} %>
+
+<section class="forms-section">
+  <h1 class="section-title">Login & Signup Forms</h1>
+  <div class="forms">
+    <div class="form-wrapper is-active">
+      <button type="button" class="switcher switcher-login">
+        Login
+        <span class="underline"></span>
+      </button>
+      <form class="form form-login" method="post" action="/login">
+        <fieldset>
+          <legend>Please, enter your email and password for login.</legend>
+
+          <div class="input-block">
+            <label for="login-email">E-mail</label>
+            <input id="login-email" type="email" name="email" required />
+          </div>
+          <div class="input-block">
+            <label for="login-password">Password</label>
+            <input
+              id="login-password"
+              type="password"
+              name="password"
+              required />
+          </div>
+        </fieldset>
+        <button type="submit" class="btn-login">Login</button>
+      </form>
+    </div>
+
+    <div class="form-wrapper">
+      <button type="button" class="switcher switcher-signup">
+        Sign Up
+        <span class="underline"></span>
+      </button>
+      <form class="form form-signup" method="post" action="/createDetail">
+        <fieldset>
+          <legend>
+            Please, enter your email, password and password confirmation for
+            sign up.
+          </legend>
+          <div class="input-block">
+            <div class="row">
+              <div class="col-md-6">
+                <label for="signup_firstname">First Name*</label>
+                <input
+                  type="text"
+                  name="first_name"
+                  class="fname form-control"
+                  required />
+              </div>
+              <div class="col-md-6">
+                <label for="signup-last-name">Last Name*</label>
+                <input
+                  type="text"
+                  name="last_name"
+                  class="lname form-control"
+                  required />
+              </div>
+            </div>
+          </div>
+          <div class="input-block">
+            <div class="row">
+              <div class="col-md-6">
+                <label for="signup-email">Email*</label>
+                <input
+                  type="email"
+                  name="email"
+                  class="form-control"
+                  required />
+              </div>
+              <div class="col-md-6">
+                <label for="signup-password">Password*</label>
+                <input
+                  type="password"
+                  name="password"
+                  class="form-control"
+                  required />
+              </div>
+            </div>
+          </div>
+
+          <div class="input-block">
+            <label for="login-email">Phone Number</label>
+            <input type="number" name="phone" class="form-control" required />
+          </div>
+        </fieldset>
+        <button type="submit" class="btn-signup">Sign Up</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<%- include('layouts/footer.ejs') -%>
