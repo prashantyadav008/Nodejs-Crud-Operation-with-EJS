@@ -22,4 +22,4 @@ Start Node Server
 
 MYSQL
 
-I have placed the database file in the configuration folder. You can either directly copy the content from the file and run it in an SQL query, or you can directly import it.
+I have placed the database file in the configuration folder. You can either directly copy the content from the file and run it in an SQL query, or you can directly import it. [Database File Link](https://github.com/prashantyadav008/Nodejs-Crud-Operation-with-EJS/blob/main/config/Node_ejs.sql)
