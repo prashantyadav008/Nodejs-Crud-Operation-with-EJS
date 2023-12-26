@@ -6,7 +6,7 @@ node_server
 
 Go to Node Folder
 
-    cd node_server
+    cd Nodejs-Crud-Operation-with-EJS
 
 Install Dependency Packages
 
